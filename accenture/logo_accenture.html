@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Animación logo Nuevo Accenture</title>
+    <style type="text/css">
+        html,body{
+            background: white;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+        }
+        .circle{
+            background: #2196F3;
+            border-radius: 50px;
+            height: 100px;
+            width: 100px;
+            left: 50%;
+            margin-left: -50px;
+            top: 50%;
+            margin-top: -50px;
+            opacity: 0;
+            position: absolute;
+            z-index: 5;
+            animation: circle 20s linear;
+        }
+        .wave{
+            background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="246" height="2000" viewBox="0 0 246 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#4CAF50" d="M0 2000c50.43 0 72.57-20.522 123-20.522 50.43 0 71.34 20.522 123 20.522V0H0v2000z"/></svg>');
+            background-position:bottom left;
+            height: 70%;
+            width: 200%;
+            bottom: -100%;
+            opacity:1;
+            position: absolute;
+            transform: rotate(180deg);
+            z-index: 5;
+            animation: wave 20s ease-in;
+        }
+        .orange-box{
+            background: #FF9800;
+            height: 200%;
+            position: absolute;
+            transform: rotate(-70deg);
+            z-index: 5;
+            width: 200%;
+            right: -220%;
+            animation: orange-box 20s ease-in;
+            -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+        }
+        .red-circle{
+            background: #F44336;
+            height: 250px;
+            border-radius: 125px;
+            width: 250px;
+            margin-top: -125px;
+            left: -100%;
+            position: absolute;
+            top: 50%;
+            animation: red-circle 20s linear;
+            z-index: 5;
+        }
+        .pink-laser{
+            background: #E91E63;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: -100%;
+            width: 100%;
+            animation: pink-laser 20s linear;
+        }
+        .logo{
+            background: white;
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -125px;
+            margin-top: -125px;
+            z-index: 2;
+            opacity: 1;
+        }
+        #logo-acc-black{
+            background: url('new_acc_logo_black.png') no-repeat center center;
+            animation: logo-black 20s linear;
+        }
+        #logo-acc-blue{
+            background: url('new_acc_logo_blue.png') no-repeat center center;
+            animation: logo-blue 20s linear;
+        }
+        #logo-acc-green{
+            background: url('new_acc_logo_green.png') no-repeat center center;
+            animation: logo-green 20s linear;
+        }
+        #logo-acc-orange{
+            background: url('new_acc_logo_orange.png') no-repeat center center;
+            animation: logo-orange 20s linear;
+        }
+        #logo-acc-red{
+            background: url('new_acc_logo_red.png') no-repeat center center;
+            animation: logo-red 20s linear;
+        }
+        #logo-acc-pink{
+            background: url('new_acc_logo_pink.png') no-repeat center center;
+            animation: logo-pink 20s linear;
+        }
+        #logo-acc-purple{
+            background: url('new_acc_logo_purple.png') no-repeat center center;
+        }
+
+        @keyframes circle{
+            0%{transform: scale(0);}
+            2.5%{transform: scale(0);opacity: 1;}
+            5%{transform: scale(1);}
+            7.5%{transform: scale(100);}
+            10%{opacity: 0;}
+        }
+
+        @keyframes logo-black{
+            0%,5%{opacity: 1;}
+            7.5%{opacity: 0;}
+            100%{opacity: 0;}
+        }
+
+        @keyframes logo-blue{
+            0%,6%{opacity: 0;}
+            6.5%,17%{opacity: 1;}
+            18%,54.9%{opacity: 0;}
+            55%{opacity:1;left: 50%}
+            57%,100%{opacity: 1;animation-timing-function: ease-out;left: 10%;}
+        }
+
+        @keyframes wave{
+            10%{bottom: -100%;}
+            17%{bottom: 0%;}
+            20%{bottom: -100%;}
+        }
+
+        @keyframes logo-green{
+            0%,17%{opacity: 0;}
+            18%,25%{opacity: 1;}
+            26%,54.9%{opacity: 0;}
+            55%{opacity: 1;left: 50%;}
+            57%,100%{animation-timing-function: ease-out;left: 30%;}
+        }
+
+        @keyframes orange-box{
+            19%,31%{right: -220%;}
+            20%{right: -190%;}
+            21%,23%{right: -160%;}
+            26%{right: -90%;}
+        }
+
+        @keyframes logo-orange{
+            0%,26%,35.5%,54.9%{opacity: 0;}
+            27%,34.7%,55%{opacity: 1;left: 50%;}
+            57%,100%{animation-timing-function: ease-out;left: 50%;}
+        }
+
+        @keyframes red-circle{
+            32%{left: -100%;}
+            36%,100%{left: 100%;}
+        }
+
+        @keyframes logo-red{
+            0%, 35%,40.6%,54.9%{opacity: 0;}
+            35.5%,40.5%,55%{opacity: 1;left: 50%;}
+            57%,100%{animation-timing-function: ease-out;left: 70%;}
+        }
+
+        @keyframes pink-laser{
+            0%,40%{right: -100%;}
+            41%,100%{right: 100%;}
+        }
+        @keyframes logo-pink{
+            0%, 40.5%{opacity: 0;}
+            40.6%,50%,55%{opacity: 1;left: 50%;}
+            57%,100%{animation-timing-function: ease-out;left: 90%;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="wave"></div>
+    <div class="orange-box"></div>
+    <div class="red-circle"></div>
+    <div class="pink-laser"></div>
+    <div class="logo" id="logo-acc-pink"></div>
+    <div class="logo" id="logo-acc-black"></div>
+    <div class="logo" id="logo-acc-red"></div>
+    <div class="logo" id="logo-acc-orange"></div>
+    <div class="logo" id="logo-acc-green"></div>
+    <div class="logo" id="logo-acc-blue"></div>
+</body>
+</html>
